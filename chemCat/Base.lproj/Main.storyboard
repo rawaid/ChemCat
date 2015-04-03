@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="587" y="64"/>
         </scene>
-        <!--Catalog View Controller-->
+        <!--Catalog-->
         <scene sceneID="8dG-JV-eAz">
             <objects>
-                <tableViewController id="X5j-Sj-e0S" customClass="CatalogViewController" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Catalog" id="X5j-Sj-e0S" customClass="CatalogViewController" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tbZ-Ag-QjM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,18 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZyJ-lS-mLs" id="CHc-3t-Dr7">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln2-9h-5vj">
+                                            <rect key="frame" x="13" y="8" width="579" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pTR-ft-A4c" kind="show" id="g9h-HQ-zeu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -103,7 +114,34 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SnD-Ax-aXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309" y="64"/>
+            <point key="canvasLocation" x="1309" y="61"/>
+        </scene>
+        <!--Catalog Detail-->
+        <scene sceneID="EXY-2g-caI">
+            <objects>
+                <viewController title="Catalog Detail" id="pTR-ft-A4c" customClass="CatalogDetailViewController" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oMa-rN-yFk"/>
+                        <viewControllerLayoutGuide type="bottom" id="eVk-X5-ZNc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9IR-Gu-d3B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LJx-ft-mcQ">
+                                <rect key="frame" x="20" y="291" width="560" height="17"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="86X-HK-AWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031" y="64"/>
         </scene>
     </scenes>
 </document>
