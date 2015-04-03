@@ -29,34 +29,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChemCat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEX-T0-f9K">
-                                <rect key="frame" x="228" y="285" width="145" height="68"/>
+                                <rect key="frame" x="228" y="293" width="145" height="68"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-hn-ld8">
-                                <rect key="frame" x="200" y="87" width="200" height="200"/>
+                                <rect key="frame" x="200" y="95" width="200" height="200"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A chemistry inventory tool created for the Ithaca College Chemistry deparrtment" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKt-V5-krQ">
-                                <rect key="frame" x="160" y="335" width="281" height="47"/>
+                                <rect key="frame" x="160" y="343" width="281" height="47"/>
                                 <color key="backgroundColor" red="0.58856004549999996" green="1" blue="0.66636169919999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5a-Lh-PUz">
-                                <rect key="frame" x="200" y="390" width="200" height="30"/>
+                                <rect key="frame" x="200" y="398" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PaP-py-EwQ">
-                                <rect key="frame" x="200" y="428" width="200" height="30"/>
+                                <rect key="frame" x="200" y="436" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46u-SP-u09">
-                                <rect key="frame" x="256" y="466" width="89" height="30"/>
+                                <rect key="frame" x="256" y="474" width="89" height="30"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,38 +72,38 @@
                         <outlet property="loginButton" destination="46u-SP-u09" id="MJO-Ua-R4l"/>
                         <outlet property="pword_field" destination="PaP-py-EwQ" id="xOK-RD-E2j"/>
                         <outlet property="uname_field" destination="S5a-Lh-PUz" id="VzC-9B-sd6"/>
-                        <segue destination="Ciz-5G-b7p" kind="show" identifier="successful_login" id="FJS-64-qU7"/>
+                        <segue destination="X5j-Sj-e0S" kind="show" identifier="successful_login" id="nuQ-g6-bjl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bq3-GR-cNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="587" y="64"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Dzm-ju-VP7">
+        <!--Table View Controller-->
+        <scene sceneID="8dG-JV-eAz">
             <objects>
-                <viewController id="Ciz-5G-b7p" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sdU-R3-WKS"/>
-                        <viewControllerLayoutGuide type="bottom" id="n4P-lq-rkr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fZI-Ym-dKD">
+                <tableViewController id="X5j-Sj-e0S" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tbZ-Ag-QjM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You logged in successfully!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGv-6K-A63">
-                                <rect key="frame" x="16" y="28" width="208" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qt0-w9-RaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZyJ-lS-mLs">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZyJ-lS-mLs" id="CHc-3t-Dr7">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="X5j-Sj-e0S" id="wib-TH-r8L"/>
+                            <outlet property="delegate" destination="X5j-Sj-e0S" id="8L3-kS-NLG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SnD-Ax-aXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="64"/>
+            <point key="canvasLocation" x="1309" y="64"/>
         </scene>
     </scenes>
 </document>
