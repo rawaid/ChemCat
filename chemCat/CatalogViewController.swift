@@ -6,13 +6,21 @@
 //  Copyright (c) 2015 Mayo Industries. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class CatalogViewController: UITableViewController {
+
+class CatalogViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var objects = NSMutableArray()
-    
+    private let dwarves = [
+        "Sleepy", "Sneezy", "Bashful", "Happy",
+        "Doc", "Grumpy", "Dopey",
+        "Thorin", "Dorin", "Nori", "Ori",
+        "Balin", "Dwalin", "Fili", "Kili",
+        "Oin", "Gloin", "Bifur", "Bofur",
+        "Bombur"]
+    let simpleTableIdentifier = "SimpleTableIdentifier"
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,57 +35,24 @@ class CatalogViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = addButton
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dwarves.count
     }
     
-    func insertNewObject(sender: AnyObject) {
-        objects.insertObject(NSDate(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
-    
-    // MARK: - Segues
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = objects[indexPath.row] as NSDate
-                (segue.destinationViewController as DetailViewController).detailItem = object
-            }
+    func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
+        if (cell != nil){
+            cell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:simpleTableIdentifier)
+            cell!.textLabel?.text = dwarves[indexPath.row]
         }
-    }
-    
-    // MARK: - Table View
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let image = UIImage(named: "star")
+        cell!.imageView?.image = image
+        let highlightedImage = UIImage(named: "star")
+        cell!.imageView?.image = highlightedImage
         
-        let object = objects[indexPath.row] as NSDate
-        cell.textLabel!.text = object.description
-        return cell
-    }
-    
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            objects.removeObjectAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
+        cell?.textLabel?.text = dwarves[indexPath.row]
+        cell?.textLabel?.font = UIFont.boldSystemFontOfSize(50)
+        
+        return cell!
     }
 }

@@ -17,6 +17,7 @@
 		0FE287F31ACB43720055044F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287F21ACB43720055044F /* LoginViewController.swift */; };
 		0FE48CE51ACE16CF0050F0EC /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */; };
 		0FE48CE71ACE1AC70050F0EC /* CatalogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */; };
+		1F2735111AD490A8009ED3AC /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F2735101AD490A8009ED3AC /* star.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		0FE287F21ACB43720055044F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogDetailViewController.swift; sourceTree = "<group>"; };
+		1F2735101AD490A8009ED3AC /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = ../../../Desktop/star.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		0FE287CE1ACB3A0D0055044F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F2735101AD490A8009ED3AC /* star.png */,
 				0FE287CF1ACB3A0D0055044F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FE287D81ACB3A0D0055044F /* Main.storyboard in Resources */,
+				1F2735111AD490A8009ED3AC /* star.png in Resources */,
 				0FE287DD1ACB3A0D0055044F /* LaunchScreen.xib in Resources */,
 				0FE287DA1ACB3A0D0055044F /* Images.xcassets in Resources */,
 			);
